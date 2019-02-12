@@ -12,6 +12,7 @@
     "babel-plugin-named-asset-import": "^0.3.1",
     "babel-preset-react-app": "^7.0.1",
     "bfj": "6.1.1",
+    "bootstrap": "4.2.1",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "css-loader": "1.0.0",
     "dotenv": "6.0.0",
@@ -43,6 +44,7 @@
     "react-app-polyfill": "^0.2.1",
     "react-dev-utils": "^7.0.2",
     "react-dom": "^16.8.1",
+    "reactstrap": "^7.1.0",
     "resolve": "1.10.0",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
@@ -57,9 +59,6 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": [
     ">0.2%",
@@ -110,11 +109,6 @@
     "watchPlugins": [
       "/Users/tpatil/Development/super9user/react-burgerbuilder/node_modules/jest-watch-typeahead/filename.js",
       "/Users/tpatil/Development/super9user/react-burgerbuilder/node_modules/jest-watch-typeahead/testname.js"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "react-app"
     ]
   }
 }
