@@ -1,17 +1,6 @@
 import React from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
-} from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand,
+  Nav, NavItem, NavLink } from 'reactstrap';
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -22,11 +11,13 @@ export default class Example extends React.Component {
       isOpen: false
     };
   }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
   }
+
   render() {
     return (
       <div>
@@ -37,6 +28,9 @@ export default class Example extends React.Component {
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <NavLink href="/">Builder</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/attributions">Attributions</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
