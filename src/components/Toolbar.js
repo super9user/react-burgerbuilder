@@ -22,12 +22,12 @@ export default class Example extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Burger Builder</NavbarBrand>
+          <NavbarBrand href="/">Burger Mania</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/">Builder</NavLink>
+                <NavLink href="/burger-builder">Build your Burger</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/attributions">Attributions</NavLink>
