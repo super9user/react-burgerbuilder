@@ -98,9 +98,7 @@ module.exports = function(webpackEnv) {
               stage: 3,
             }),
           ],
-          sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
-          modules: true,
-          localIdentName: '[name]__[local]__[hash:base64:5]'
+          sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment
         },
       },
     ].filter(Boolean);
@@ -398,6 +396,8 @@ module.exports = function(webpackEnv) {
                 sourceMap: isEnvProduction
                   ? shouldUseSourceMap
                   : isEnvDevelopment,
+                // modules: true,
+                // localIdentName: '[name]__[local]__[hash:base64:5]'
               }),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
