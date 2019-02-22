@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
 import Home from './components/Home';
 import Toolbar from './components/Toolbar';
-import BurgerBuilder from './components/BurgerBuilder';
+import BurgerBuilder from './components/BurgerBuilder/BurgerBuilder';
 import Attributions from './components/Attributions/Attributions';
 
 class App extends Component {
