@@ -14,6 +14,7 @@ class BurgerBuilder extends Component {
       cheese: 0,
       patty: 0
     };
+    this.handleIngredientChange = this.handleIngredientChange.bind(this);
   }
 
   handleIngredientChange(event) {
@@ -34,7 +35,7 @@ class BurgerBuilder extends Component {
           <Col lg='6'>
             <Row className="justify-content-center">
               <Col xs='12'>
-                <Controls onChangeHandler={this.handleIngredientChange.bind(this)} />
+                <Controls onChangeHandler={this.handleIngredientChange} />
               </Col>
             </Row>
             <Row className="justify-content-center">
