@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Preview from './Preview';
 import Controls from './Controls/Controls';
+import Order from './Order';
 import { Container, Row, Col } from 'reactstrap';
+import prices from '../../prices';
 
 class BurgerBuilder extends Component {
   constructor(props) {
@@ -12,14 +14,21 @@ class BurgerBuilder extends Component {
       jalapeno: 0,
       tomato: 0,
       cheese: 0,
-      patty: 0
+      patty: 0,
+      totalPrice: prices.base
     };
     this.handleIngredientChange = this.handleIngredientChange.bind(this);
   }
 
   handleIngredientChange(event) {
-    this.setState({
-      [event.target.id]: event.target.value
+    const id = event.target.id;
+    const value = event.target.value;
+    this.setState(state => {
+      const changedValue = (value - state[id]) * prices[id];
+      return {
+        [id]: value,
+        totalPrice: state.totalPrice + changedValue
+      }
     });
   }
 
@@ -39,7 +48,9 @@ class BurgerBuilder extends Component {
               </Col>
             </Row>
             <Row className="justify-content-center">
-              <Col xs='auto'>Column3</Col>
+              <Col xs='12'>
+                <Order totalPrice={this.state.totalPrice} />
+              </Col>
             </Row>
           </Col>
         </Row>
